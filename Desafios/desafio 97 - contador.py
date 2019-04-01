@@ -55,4 +55,6 @@ passo = int(input('Nº de pulos? '))
 
 linhas(20)
 contador(inicio, fim, passo)
+
+input("Digite ENTER para sair... ")
 linhas(20)
