@@ -21,3 +21,5 @@ def leiaInt(msg):
 numero = leiaInt("Digite um numero: ")
 print(f'Você digitou número {numero}')
 print('=' * 20)
+
+input('Digite ENTER para sair...')
