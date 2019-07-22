@@ -39,7 +39,6 @@ def validate(numero):
         break
 
 
-
 def main():
 
     numero = validate("Digite um numero: ")
