@@ -6,13 +6,17 @@ note = 'pessoas.txt'
 
 
 def cadastrar():
-    cadastro = open(note, "a")
-    nome = str(input('nome: '))
-    idade = int(input('Idade: '))
-    cadastro.write(f'\n{nome} \t\t{idade} Anos')
-    print('Feito!')
-    sleep(1.5)
-    cadastro.close()
+    try:
+        cadastro = open(note, "a")
+        nome = str(input('nome: '))
+        idade = int(input('Idade: '))
+        cadastro.write(f'\n{nome} \t\t{idade} Anos')
+        print('Feito!')
+        sleep(1.5)
+        cadastro.close()
+        
+    except Exception as error:
+        print('Formato invalido, tente novamente')
 
 
 def exibir():
@@ -20,7 +24,7 @@ def exibir():
         leitura = open(note, 'r')
 
     except FileNotFoundError:
-        print('[ERRO] Arquivo vazio!')
+        print('Arquivo vazio :(')
         sleep(2)
 
     else:

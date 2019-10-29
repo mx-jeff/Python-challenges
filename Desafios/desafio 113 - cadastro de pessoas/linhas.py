@@ -3,18 +3,16 @@
 
 def titulo(msg):
     tamanho = len(msg) + 4
-    print('-' * tamanho)
-    print(f'  {msg}')
-    print('-' * tamanho)
+    print('-' * tamanho * 2)
+    print(msg.center(40))
+    print('-' * tamanho * 2)
 
 
 def options():
-    print('''1 - Ver pessoas cadastradas
-2 - Cadastrar pessoas novas
-3 - Deletar cadastro
-4 - Sair do sistema
-    ''')
+    opcoes = ['Ver pessoas cadastradas', 'Cadastrar pessoas novas', 'Deletar cadastro', 'Sair do sistema']
+    for lista, opcao in enumerate(opcoes):
+        print(f"{lista+1} - {opcao}")
 
 
-def linhas():
-    print(f'-' * 40)
+def linhas(linhas=40):
+    print(f'-' * linhas)
